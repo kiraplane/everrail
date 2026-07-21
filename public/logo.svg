@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">EverRail Wiki</title>
+  <desc id="desc">A cyan survival locomotive running through ice.</desc>
+  <defs>
+    <linearGradient id="sky" x1="9" y1="5" x2="55" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102b3a"/>
+      <stop offset="1" stop-color="#061019"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#sky)"/>
+  <path d="M8 48h48M14 57l8-9m6 9 8-9m6 9 8-9" fill="none" stroke="#244657" stroke-width="3" stroke-linecap="round"/>
+  <path d="M13 39h39l4 9H9l4-9Z" fill="#0b1d29" stroke="#62d8ff" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M19 17h22v22H19z" fill="#123246" stroke="#62d8ff" stroke-width="2"/>
+  <path d="M41 26h7l5 13H41V26Z" fill="#123246" stroke="#62d8ff" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M23 21h14v9H23z" fill="#62d8ff" opacity=".9"/>
+  <path d="M42 29h4l3 7h-7z" fill="#ffbf5b"/>
+  <circle cx="20" cy="46" r="5" fill="#061019" stroke="#eef9ff" stroke-width="2"/>
+  <circle cx="45" cy="46" r="5" fill="#061019" stroke="#eef9ff" stroke-width="2"/>
+  <path d="M19 13h23" stroke="#ffbf5b" stroke-width="3" stroke-linecap="round"/>
+</svg>

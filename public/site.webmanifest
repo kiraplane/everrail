@@ -1,0 +1,20 @@
+{
+  "name": "EverRail Wiki",
+  "short_name": "EverRail",
+  "description": "Independent EverRail guides for train systems, survival, co-op, achievements and Steam.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#62d8ff",
+  "background_color": "#061019",
+  "display": "standalone"
+}
