@@ -1,7 +1,7 @@
 import { achievements } from './sources';
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-21';
+const checkedAt = '2026-07-24';
 const publishedAt = '2026-07-21';
 
 const videos = {
@@ -1360,6 +1360,82 @@ export const guides: Guide[] = [
       },
     ],
   }),
+  {
+    slug: 'patch-0-2-2',
+    path: '/guides/patch-0-2-2',
+    title: 'EverRail 0.2.2 Patch Guide',
+    seoTitle: 'EverRail 0.2.2 Patch: Multiplayer, Glider & Fixes',
+    seoDescription:
+      'See what EverRail 0.2.2 changes for multiplayer sync, gliders, crafting, building, repair tools, performance and current troubleshooting.',
+    summary:
+      'Patch 0.2.2 targets the launch-week pain points that affect real runs: co-op synchronization, missed building inputs, glider behavior, crafting queues, repair tools and several crashes.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/everrail/screenshots/3.jpg',
+    publishedAt: '2026-07-24',
+    updatedAt: '2026-07-24',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Summarized from the official Engine Room Dev Update 0.2.2 published July 23. Current in-game tooltips and later Steam announcements override this snapshot.',
+    videoSearchQueries: [
+      'EverRail 0.2.2 patch',
+      'EverRail multiplayer fix',
+      'EverRail glider update',
+    ],
+    tags: ['0.2.2', 'Multiplayer', 'Glider'],
+    relatedRoutes: [
+      '/guides/co-op-roles-multiplayer-fixes',
+      '/guides/glider-scouting-iso-guide',
+      '/guides/crafting-building-recycler',
+      '/guides/beginner-guide',
+    ],
+    body: [
+      {
+        heading: 'Update every co-op client before retrying a run',
+        paragraphs: [
+          'Version 0.2.2 improves item-container synchronization, aiming responsiveness, writable signs, crafting queues, repair effects and building placement for multiplayer clients. It also fixes invisible stairs, incorrect crafting-station displays and several cases where client inputs could be missed.',
+          'Have the host and every joining player close the game, finish the Steam update and restart before loading the shared save. If an old session still shows duplicated containers or broken prompts, test a fresh reconnect before changing network settings or dismantling important train modules.',
+        ],
+      },
+      {
+        heading: 'Gliders have clearer rules and safer failure states',
+        paragraphs: [
+          'The patch fixes gliders continuing to respond after crashing, improves launch feedback, repairs Blackbox issues and prevents launches inside tunnels. It also corrects Glider Loadout Station placement and active-glider updates.',
+          'Keep the platform clear, launch only in open track sections and verify the selected loadout before takeoff. A pre-patch video may still show tunnel launches or old feedback, so use the current client when its behavior differs from an older guide.',
+        ],
+      },
+      {
+        heading: 'Crafting and building should lose fewer inputs',
+        paragraphs: [
+          'Patch 0.2.2 fixes crafting queues appearing at the wrong station, improves queue synchronization and makes client building placement more reliable. Repair and dismantling visuals were also updated, and a completed craft now has clearer energy-cost warning support.',
+          'If a queue still appears wrong, stop adding new jobs, reopen the intended station and compare the shared inventory before retrying. For placement problems, move away from walkways and verify the floor spawned correctly inside the train.',
+        ],
+      },
+      {
+        heading: 'Use the new stability options before deeper fixes',
+        paragraphs: [
+          'The update adds a configurable FPS limit with a 30 FPS minimum and reduces large stutters when leaving the train. It fixes crashes tied to firing before death, drone movement, reopening Settings and rapidly switching equipment.',
+          'Set a stable frame limit, remove rapid equipment switching from the reproduction steps and verify files through Steam if crashes continue. Report the save state, player count, tool in hand and exact transition to the official discussion or Discord so the issue can be separated from a fixed 0.2.2 case.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the latest EverRail patch in this guide?',
+        answer:
+          'Version 0.2.2, published through the official Steam news surface on July 23, 2026.',
+      },
+      {
+        question: 'Does 0.2.2 fix multiplayer?',
+        answer:
+          'It fixes many synchronization, placement, repair and crafting problems, but it does not guarantee every network or save-specific issue is resolved.',
+      },
+      {
+        question: 'Can gliders launch inside tunnels after 0.2.2?',
+        answer: 'No. The official notes say tunnel launching is now prevented.',
+      },
+    ],
+  },
 ];
 
 export const featuredGuides = [
@@ -1367,6 +1443,7 @@ export const featuredGuides = [
   guides.find((guide) => guide.slug === 'train-battery-energy-guide'),
   guides.find((guide) => guide.slug === 'passengers-rations-respawn'),
   guides.find((guide) => guide.slug === 'co-op-roles-multiplayer-fixes'),
+  guides.find((guide) => guide.slug === 'patch-0-2-2'),
   guides.find((guide) => guide.slug === 'achievements-guide'),
   guides.find((guide) => guide.slug === 'demo-vs-early-access'),
 ].filter((guide): guide is Guide => Boolean(guide));
