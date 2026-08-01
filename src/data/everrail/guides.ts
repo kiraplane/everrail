@@ -1,7 +1,7 @@
 import { achievements } from './sources';
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-29';
+const checkedAt = '2026-07-31';
 const publishedAt = '2026-07-21';
 
 const videos = {
@@ -54,6 +54,16 @@ const videos = {
     thumbnailUrl: '/everrail/guides/developer-launch.jpg',
     publishedAt: '2026-07-21',
     viewCountLabel: 'Official developer launch stream',
+    checkedAt,
+  },
+  survivalSecrets: {
+    id: 'oKCRK6J89kc',
+    title: 'EverRail: 10 Train Survival Secrets the Game DOESN’T Tell You!',
+    channel: 'Gaming Plus TV',
+    url: 'https://www.youtube.com/watch?v=oKCRK6J89kc',
+    thumbnailUrl: '/everrail/guides/solo-day-one.jpg',
+    publishedAt: '2026-07-21',
+    viewCountLabel: '709 views when checked',
     checkedAt,
   },
 } satisfies Record<string, GuideVideo>;
@@ -1361,6 +1371,89 @@ export const guides: Guide[] = [
     ],
   }),
   {
+    slug: 'patch-0-2-4-engine-room',
+    path: '/guides/patch-0-2-4-engine-room',
+    title: 'EverRail 0.2.4 Engine Room Update',
+    seoTitle: 'EverRail 0.2.4 Patch - Capacity, Loot & Combat',
+    seoDescription:
+      'See what EverRail 0.2.4 changes for passenger capacity, wagon loot, weapon accuracy, UI, performance, co-op fixes and current runs.',
+    summary:
+      'Patch 0.2.4 changes several decisions you make every run: Passenger Count now sets maximum capacity, wagon loot is less predictable and weapon classes no longer share the same accuracy profile.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/everrail/screenshots/3.jpg',
+    publishedAt: '2026-07-31',
+    updatedAt: '2026-07-31',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'The patch details come from the official Engine Room Dev Update 0.2.4 published July 30. The embedded survival video is supporting route context, not the source for exact patch values.',
+    videoSearchQueries: [
+      'EverRail 0.2.4 patch',
+      'EverRail train survival secrets',
+      'EverRail passenger capacity wagon loot',
+    ],
+    video: videos.survivalSecrets,
+    tags: ['0.2.4', 'Passenger capacity', 'Wagon loot'],
+    relatedRoutes: [
+      '/guides/passengers-rations-respawn',
+      '/guides/combat-weapons-armor',
+      '/guides/wagons-modules-expansion',
+      '/guides/co-op-roles-multiplayer-fixes',
+    ],
+    body: [
+      {
+        heading: 'Set Passenger Count for the capacity you actually want',
+        paragraphs: [
+          'Version 0.2.4 changes the Passenger Count setting so it defines the starting maximum passenger capacity. Treat it as a run-planning choice rather than a cosmetic population preference.',
+          'A smaller cap reduces early food and space pressure, while a larger cap gives you room to rescue more survivors but makes rations, beds and wagon planning more important. Confirm the setting before creating the run because an older guide may describe the pre-patch behavior.',
+        ],
+      },
+      {
+        heading: 'Search every wagon instead of memorizing one loot route',
+        paragraphs: [
+          'Wagons now use randomized loot presets. A container or wagon that supplied one category in an older video may roll a different preset in the current build.',
+          'Plan expeditions around categories you still need, but inspect each reachable container and keep a return threshold based on battery, temperature and inventory space. Fixed-location loot claims from launch-week routes should now be treated as examples, not guarantees.',
+        ],
+        bullets: [
+          'Leave free inventory slots before entering a new wagon.',
+          'Mark useful wagon types, not one guaranteed item location.',
+          'Return before the train battery becomes the emergency.',
+        ],
+      },
+      {
+        heading: 'Retest weapon roles after the accuracy rebalance',
+        paragraphs: [
+          'The patch rebalances accuracy for SMGs, pistols and rifles while leaving shotguns outside that specific change. Do not compare classes only by the launch version’s spread or first-shot feel.',
+          'Test a weapon at the distance where you intend to use it, then compare hit consistency, ammunition pressure and reload windows. Keep a reliable close-range option while learning the new rifle and pistol behavior.',
+        ],
+      },
+      {
+        heading: 'Use the patch before troubleshooting co-op and performance',
+        paragraphs: [
+          'Version 0.2.4 fixes passenger-pod persistence, missing multiplayer sounds, headshot handling, tool visibility, toolbelt stacking, crashes and several stutter cases. It also adds clearer maximum-HP display and scales the interface to 90 percent.',
+          'Update the host and every client, restart Steam and reconnect before rebuilding a wagon or deleting a save. The first DX12 launch may still need time to compile and settle; reproduce a remaining issue only after all players confirm the same version.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the biggest gameplay change in EverRail 0.2.4?',
+        answer:
+          'Passenger Count now controls starting maximum capacity, wagon loot uses randomized presets and several weapon classes received accuracy changes.',
+      },
+      {
+        question: 'Are wagon loot locations still fixed?',
+        answer:
+          'Do not assume they are. The official notes say wagons now use randomized loot presets.',
+      },
+      {
+        question: 'Did shotguns receive the same accuracy rebalance?',
+        answer:
+          'The official note names SMGs, pistols and rifles for the accuracy rebalance, not shotguns.',
+      },
+    ],
+  },
+  {
     slug: 'patch-0-2-2',
     path: '/guides/patch-0-2-2',
     title: 'EverRail 0.2.2 Patch Guide',
@@ -1439,6 +1532,7 @@ export const guides: Guide[] = [
 ];
 
 export const featuredGuides = [
+  guides.find((guide) => guide.slug === 'patch-0-2-4-engine-room'),
   guides.find((guide) => guide.slug === 'beginner-guide'),
   guides.find((guide) => guide.slug === 'train-battery-energy-guide'),
   guides.find((guide) => guide.slug === 'passengers-rations-respawn'),
