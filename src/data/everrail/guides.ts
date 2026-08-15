@@ -1,7 +1,7 @@
 import { achievements } from './sources';
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-08-13';
+const checkedAt = '2026-08-15';
 const publishedAt = '2026-07-21';
 
 const videos = {
@@ -840,6 +840,19 @@ export const guides: Guide[] = [
           'Do not scrap in the blast path of a self-destruct enemy.',
           'Preserve inventory room for the objective material.',
           'Leave when combat consumes the contingency reserve.',
+        ],
+      },
+      {
+        heading: 'Use EMP and Aegis as resource trades',
+        paragraphs: [
+          'The official Conductors Log Day 8 describes an EMP pistol that temporarily removes a turret shield. Treat that as an opening tool: disable the protection, use the short damage window, and avoid spending ordinary ammunition into the shield. The post does not publish fixed duration, damage, or recipe values, so the current workbench and weapon tooltip remain the authority.',
+          'The same log shows the train Aegis protecting the group from debris while consuming substantial energy. Activate protection for a real collision or blocked-track problem, then check the battery before the next stop. A shield that saves train health can still create an energy emergency if the crew immediately begins a long expedition.',
+        ],
+        bullets: [
+          'EMP the turret shield before committing the team to open fire.',
+          'Use the train horn and crew calls to coordinate a short attack window.',
+          'Check battery reserve after Aegis use before leaving the train.',
+          'Keep a repair kit available when protection or timing is uncertain.',
         ],
       },
       {

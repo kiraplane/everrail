@@ -5,7 +5,7 @@ import type {
   KeywordMatrixItem,
 } from './types';
 
-export const checkedAt = '2026-08-13';
+export const checkedAt = '2026-08-15';
 
 export const siteFacts = {
   siteName: 'EverRail Wiki',
@@ -237,6 +237,14 @@ export const achievements: Achievement[] = [
 ];
 
 export const sources: DataSource[] = [
+  {
+    type: 'official',
+    label: 'Conductors Log Day 8: Aegis Activation',
+    url: 'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183777069',
+    checkedAt,
+    confidence: 'high',
+    note: 'Official August 13 narrative source for the EMP pistol stripping turret shields, the Aegis energy tradeoff, train horn, repair kit and workstation/storage loop. Narrative examples are not treated as fixed stats.',
+  },
   {
     type: 'official',
     label: 'EverRail Steam store',
