@@ -5,7 +5,7 @@ import type {
   KeywordMatrixItem,
 } from './types';
 
-export const checkedAt = '2026-08-22';
+export const checkedAt = '2026-08-24';
 
 export const siteFacts = {
   siteName: 'EverRail Wiki',
@@ -237,6 +237,14 @@ export const achievements: Achievement[] = [
 ];
 
 export const sources: DataSource[] = [
+  {
+    type: 'official',
+    label: 'EverRail Engine Room Update 0.2.7',
+    url: 'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183788606',
+    checkedAt,
+    confidence: 'high',
+    note: 'Official August 18 source for piloted Gliders, glider-only inventories, mission/tutorial fixes, tracked recipes in crafting, storage capacity and save-safe crafting refunds.',
+  },
   {
     type: 'official',
     label: 'Conductors Log Day 8: Aegis Activation',

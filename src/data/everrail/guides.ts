@@ -1,7 +1,7 @@
 import { achievements } from './sources';
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-08-22';
+const checkedAt = '2026-08-24';
 const publishedAt = '2026-07-21';
 
 const videos = {
@@ -75,6 +75,82 @@ const makeGuide = (guide: Omit<Guide, 'publishedAt' | 'updatedAt'>): Guide => ({
 });
 
 export const guides: Guide[] = [
+  {
+    slug: 'patch-0-2-7-glider-crafting-guide',
+    path: '/guides/patch-0-2-7-glider-crafting-guide',
+    title: 'EverRail Patch 0.2.7 Glider and Crafting Guide',
+    seoTitle: 'EverRail 0.2.7 - Glider, Missions, Storage & Crafting',
+    seoDescription:
+      'Use EverRail 0.2.7 piloted Gliders, tracked recipes, improved storage and repaired missions without losing queued crafting resources.',
+    summary:
+      'Patch 0.2.7 clarifies that the Glider is directly piloted, restricts its inventory, repairs mission flow and makes storage and recipe tracking more reliable.',
+    category: 'Status',
+    difficulty: 'System guide',
+    coverImageUrl: videos.thingsToKnow.thumbnailUrl,
+    publishedAt: '2026-08-24',
+    updatedAt: '2026-08-24',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Built from the official August 18 Engine Room 0.2.7 notes. Recipe costs and storage slot counts should be read from the current installed build.',
+    videoSearchQueries: [
+      'EverRail 0.2.7 glider crafting',
+      'EverRail tracked recipes storage missions',
+    ],
+    tags: ['0.2.7', 'Glider', 'Crafting'],
+    relatedRoutes: [
+      '/guides/glider-scouting-iso-guide',
+      '/guides/crafting-building-recycler',
+      '/guides/wagons-storage-train-upgrades',
+      '/guides/expeditions-return-plan',
+    ],
+    body: [
+      {
+        heading: 'Treat the Glider as a piloted vehicle',
+        paragraphs: [
+          'The redesigned launch hatch makes it clearer that the player is flying the Glider and dies if it is destroyed. Scout with a return route and avoid treating a risky flight like a disposable drone mission.',
+          'Glider inventories now accept only Glider equipment and upgrades. Move ordinary loot and train items into the correct storage before launch so a blocked slot does not waste preparation time.',
+        ],
+      },
+      {
+        heading: 'Resume missions that previously stalled',
+        paragraphs: [
+          'The patch repairs repeated mission steps, prerequisite triggers, hint ordering, train repair completion and objective markers that pointed into the void. Load the existing save and retry the active objective before starting a new run.',
+          'Train repair objectives now complete at 90 percent repair. If the step still does not advance, verify the build, record the objective name and use the in-game F2 report with save data.',
+        ],
+      },
+      {
+        heading: 'Track recipes inside the crafting screen',
+        paragraphs: [
+          'Pinned recipes now appear in the crafting screen with the remaining total materials. Use that total before leaving the train, then collect only the materials that close the current recipe gap.',
+          'The patch fixes resources lost when a client cancels queued crafting and restores an in-progress item after loading a save. Keep inventory space available because returned resources drop to the ground when the inventory is full.',
+        ],
+      },
+      {
+        heading: 'Recompare large storage buildings',
+        paragraphs: [
+          'Storage slot counts now scale with building size so larger storage is at least as space-efficient as smaller options. Recalculate capacity per wagon tile before replacing several small containers.',
+          'Move one category at a time and keep a temporary overflow container until the new layout is proven. A theoretical capacity gain is not useful if daily crafting and ration routes become harder to read.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Is the EverRail Glider a drone?',
+        answer:
+          'No. Patch 0.2.7 clarifies that the player directly pilots it and dies if it is destroyed.',
+      },
+      {
+        question: 'Can a Glider carry ordinary inventory items?',
+        answer:
+          'The updated Glider inventory accepts Glider equipment and upgrades only.',
+      },
+      {
+        question: 'What happens to canceled crafting resources?',
+        answer:
+          'The patch fixes client-side losses. Returned resources go to inventory or drop on the ground when the inventory is full.',
+      },
+    ],
+  },
   makeGuide({
     slug: 'beginner-guide',
     path: '/guides/beginner-guide',
